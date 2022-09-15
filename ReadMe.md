@@ -4,8 +4,8 @@
         these are available inside Google Cloud Shell.  
         1. open two separate terminal sessions:  
             * check that your Project Id is shown in yellow/gold in parentheses.
-            * in one terminal **cd sample-master/internal**  
-            * in the other terminal **cd sample-master/external**  
+            * in one terminal **cd aws-training-project/internal**  
+            * in the other terminal **cd aws-training-project/external**  
         1. run **npm install** in each terminal
         1. run **node server.js** in the *internal* terminal
         1. run **npm start** in the *external* terminal
@@ -13,8 +13,8 @@
     1. Using Your own machine (Windows users, see note at bottom this file):  
         prerequisites: node and npm  
         1. open two separate terminal sessions:  
-            * in one terminal **cd sample-master/internal**  
-            * in the other terminal **cd sample-master/external**  
+            * in one terminal **cd aws-training-project/internal**  
+            * in the other terminal **cd aws-training-project/external**  
         1. run **npm install** in each terminal
         1. run **node server.js** in the *internal* terminal
         1. run **npm start** in the *external* terminal
