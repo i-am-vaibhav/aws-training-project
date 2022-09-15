@@ -1,0 +1,26 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: aws-training-api
+spec: 
+  selector:
+    matchLabels:
+      app: aws-training-api
+  replicas: 2 # tells deployment to run 1 pod matching the template
+  template:
+    metadata:
+      labels:
+        app: aws-training-api
+    spec:
+      containers:
+      - name: aws-training-api
+        image: iamvaibhavgupta/internal:v1.0.0
+        env: 
+        - name: PORT
+          value: "8082"
+        - name: GOOGLE_CLOUD_PROJECT
+          value: "roidtc-cnd-user130"
+        ports:
+        - containerPort: 8082
+            
+        

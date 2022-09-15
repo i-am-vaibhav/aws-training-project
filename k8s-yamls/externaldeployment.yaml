@@ -1,0 +1,24 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: aws-training-ui
+spec: 
+  selector:
+    matchLabels:
+      app: aws-training-ui
+  replicas: 2 # tells deployment to run 1 pod matching the template
+  template:
+    metadata:
+      labels:
+        app: aws-training-ui
+    spec:
+      containers:
+      - name: aws-training-ui
+        image: iamvaibhavgupta/external:v1.0.0
+        env: 
+        - name: SERVER
+          value: "http://aws-training-service:8082"
+        ports:
+        - containerPort: 8080 # port number of external service
+            
+        

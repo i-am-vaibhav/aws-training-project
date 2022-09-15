@@ -1,0 +1,13 @@
+apiVersion: v1 
+kind: Service
+metadata:
+  name: aws-training-ui-service # name of the external service loadbalancer
+spec:
+  ports:
+  - name: http
+    port: 80
+    targetPort: 8080 # port number of external service
+    protocol: TCP
+  selector:
+    app: aws-training-ui
+  type: LoadBalancer
