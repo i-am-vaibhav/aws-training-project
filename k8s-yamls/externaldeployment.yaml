@@ -17,7 +17,7 @@ spec:
         image: iamvaibhavgupta/external:v1.0.0
         env: 
         - name: SERVER
-          value: "http://aws-training-service:8082"
+          value: "http://aws-training-service.production:8082"
         ports:
         - containerPort: 8080 # port number of external service
             
